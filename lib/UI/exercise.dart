@@ -87,9 +87,11 @@ class _ExerciseState extends State<Exercise> {
       ),
 
       bottomNavigationBar: BottomAppBar(
+        shadowColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
         elevation: 20,
         height: 60,
-        color: Colors.white,
+        color: Colors.transparent,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -97,27 +99,27 @@ class _ExerciseState extends State<Exercise> {
                Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const Home()),
               );
-            }, icon: const Icon(Icons.home)),
+            }, icon: const Icon(Icons.home,color: Colors.white,)),
             IconButton(onPressed:(){
               Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const Graph()),
               );
 
-            }, icon: const Icon(Icons.show_chart)),
+            }, icon: const Icon(Icons.show_chart,color: Colors.white)),
             IconButton(onPressed:(){
 
-            }, icon: const Icon(Icons.add_circle_outlined)),
+            }, icon: const Icon(Icons.add_circle_outlined,color: Colors.white)),
             IconButton(onPressed:(){
               Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const TrainingProgram()),
               );
 
-            }, icon: const Icon(Icons.note_alt)),
+            }, icon: const Icon(Icons.note_alt,color: Colors.white)),
             IconButton(onPressed:(){
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const settings()),
               );
-            }, icon: const Icon(Icons.settings)),
+            }, icon: const Icon(Icons.settings,color: Colors.white)),
           ],
         ),
       ),
